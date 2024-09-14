@@ -1,12 +1,12 @@
 import "./app.css";
+import HeroSection from "./Components/HeroSection/HeroSection";
 import NavBar from "./Components/NavBar/NavBar";
 
-type Props = {};
-
-const App = (props: Props) => {
+const App = () => {
   return (
     <main>
       <NavBar />
+      <HeroSection />
     </main>
   );
 };
