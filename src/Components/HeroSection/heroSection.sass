@@ -1,3 +1,9 @@
-
+@use "../../assets/sass/index" as *
 #hero
     padding-bottom: 80px
+
+@media (min-width: $tablet)
+    #hero
+        display: grid
+        grid-template-areas: "heroCon news" "popular popular"
+        column-gap: 2.5rem

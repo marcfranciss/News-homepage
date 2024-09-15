@@ -30,3 +30,10 @@
         font-weight: 800
     > p
         color: $gunmetal
+
+@media (min-width: $tablet)
+    .popular-container
+        display: grid
+        grid-area: popular
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr

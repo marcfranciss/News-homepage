@@ -35,6 +35,7 @@
 }
 
 .nav-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,4 +105,36 @@ a:hover {
   left: 0;
   visibility: visible;
   opacity: 1;
+}
+
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  #mobile-nav, .navbar-toggler {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+  }
+  .main-nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 2.5rem;
+  }
+  .main-nav > ul > li > a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: hsl(237, 13%, 42%);
+    font-weight: 400;
+  }
+}
+@media (min-width: 48rem) and (min-width: 68rem) {
+  .nav-container {
+    margin-inline: 0;
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=navbar.css.map */

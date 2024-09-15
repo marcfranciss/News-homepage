@@ -71,4 +71,13 @@
 }
 .popular-texts > p {
   color: hsl(237, 13%, 42%);
+}
+
+@media (min-width: 48rem) {
+  .popular-container {
+    display: grid;
+    grid-area: popular;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
 }/*# sourceMappingURL=popular.css.map */
