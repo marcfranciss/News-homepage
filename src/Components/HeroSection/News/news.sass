@@ -11,6 +11,9 @@
     > h2
         color: $yellow
         margin-bottom: 35px
+        font-size: 2rem
+        font-weight: 700
+        line-height: 2rem
 
 .news-content
     display: grid
@@ -27,6 +30,10 @@
     > h3
         color: $white
         font-weight: 800
+        transition: color 0.4s ease
+        &:hover
+            cursor: pointer
+            color: $yellow
     > p
         color: $silver
 
@@ -40,3 +47,10 @@
     .news-container
         grid-auto-columns: 3fr
         grid-area: news
+        padding-block: 2rem
+        margin-bottom: 0
+        > h2
+            margin-bottom: 34px
+            font-size: 2.5rem
+            font-weight: 700
+            line-height: 2.5rem

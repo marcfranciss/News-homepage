@@ -19,7 +19,9 @@ const newsArr = [
 const News = () => {
   return (
     <div className='news-container'>
-      <h2 className='heading-m'>New</h2>
+      <h2 className='heading-m' id='new'>
+        New
+      </h2>
       <div className='news-content'>
         {newsArr.map((arr) => {
           return (

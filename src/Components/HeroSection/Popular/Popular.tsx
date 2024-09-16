@@ -26,14 +26,19 @@ const popularArr = [
 const Popular = () => {
   return (
     <div className='popular-container'>
-      {popularArr.map((arr) => {
+      {popularArr.map((arr, index) => {
         return (
           <div className='popular-card' key={arr.header}>
             <div className='popular-img'>
               <img src={arr.image} alt='' />
             </div>
             <div className='popular-texts'>
-              <span className='heading-m'>{arr.number}</span>
+              <span
+                className='heading-m'
+                id='popular'
+                aria-label={`${index + 1} of ${popularArr.length}`}>
+                {arr.number}
+              </span>
               <h3 className='heading-xs'>{arr.header}</h3>
               <p className='text-body'>{arr.text}</p>
             </div>

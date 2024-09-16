@@ -34,6 +34,13 @@
   line-height: 26px;
 }
 
+@media (min-width: 48rem) {
+  .heading-l {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+  }
+}
 @font-face {
   font-family: "Inter";
   src: url(./assets/fonts/Inter-VariableFont_slnt,wght.ttf) format(truetype);
@@ -66,6 +73,11 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+}
+
 main {
   max-width: 1440px;
   display: flex;
@@ -82,7 +94,6 @@ section {
     margin-block: 90px;
   }
   nav {
-    width: 100%;
     padding-inline: 165px;
   }
   section {

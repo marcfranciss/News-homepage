@@ -34,15 +34,20 @@
   line-height: 26px;
 }
 
+@media (min-width: 48rem) {
+  .heading-l {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+  }
+}
 #hero {
   padding-bottom: 80px;
 }
 
 @media (min-width: 48rem) {
   #hero {
-    display: grid;
-    grid-template-areas: "heroCon news" "popular popular";
-    -moz-column-gap: 2.5rem;
-         column-gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=heroSection.css.map */

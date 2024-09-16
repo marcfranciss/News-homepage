@@ -1,4 +1,5 @@
 @use "../../assets/sass/index.sass" as *
+
 .nav-container
     width: 100%
     display: flex
@@ -22,12 +23,15 @@ button
 .links-container
     visibility: hidden
     opacity: 0
+    border: none
+    outline: none
+    position: fixed
     display: flex
     flex-direction: column
     background: $space-blue-500
     width: 100%
     height: 100vh
-    transition: opacity 0.7s ease-out
+    transition: opacity 0.4s ease-out
 
     & > ul
         width: 256px
@@ -40,28 +44,25 @@ button
         background-color: $white
         padding-block: 27.3px 1.5rem
         padding-inline: 1.5rem 20.8px
-
         & > .close-nav
             height: 30.41px
             width: 30.41px
             margin-bottom: 86.3px
-
+            align-self: flex-end
         & > li
             margin-bottom: 1.5rem
 
-            & > a
-                text-decoration: none
-                text-transform: capitalize
-                color: inherit
-                font-weight: 400
-                line-height: 1.5rem
+.nav-links
+    text-decoration: none
+    text-transform: capitalize
+    color: inherit
+    font-weight: 400
+    line-height: 1.5rem
+    transition: color 0.4s ease
+    &:hover
+        color: $vermillion
 
-a:hover
-    color: $vermillion
-.collapse
-    position: absolute
-    top: 0
-    left: 0
+.open
     visibility: visible
     opacity: 1
 
@@ -71,23 +72,20 @@ a:hover
 @media (min-width: $tablet)
     #mobile-nav, .navbar-toggler
         display: none
-
-    .main-nav
+    .nav-container
+        width: 100%
+        margin-bottom: 55.1px
+    ul.main-nav
         display: flex
-        > ul
-            display: flex
-            flex-direction: row
-            align-items: center
-            list-style: none
-            gap: 2.5rem
-            >li
-                > a
-                    text-decoration: none
-                    text-transform: capitalize
-                    color: $gunmetal
-                    font-weight: 400
+        flex-direction: row
+        align-items: center
+        list-style: none
+        gap: 2.5rem
 
-    @media (min-width: 68rem)
-        .nav-container
-            margin-inline: 0
-            margin-top: 0
+@media (min-width: $laptop)
+    .nav-container
+        margin-inline: 0
+        margin-top: 0
+    .logo-container
+        width: 4rem
+        height: 2.5rem

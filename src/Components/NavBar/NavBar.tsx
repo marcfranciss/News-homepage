@@ -14,19 +14,17 @@ const NavBar = () => {
         <div className='logo-container'>
           <img src={navLogo} alt='' />
         </div>
-        <div className='main-nav'>
-          <ul>
-            {navArr.map((arr) => {
-              return (
-                <li key={arr}>
-                  <a href={`#${arr}`} className='text-body'>
-                    {arr}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <ul className='main-nav'>
+          {navArr.map((arr) => {
+            return (
+              <li key={arr}>
+                <a href={`#${arr}`} className='text-body nav-links'>
+                  {arr}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
         <button
           type='button'
           className='navbar-toggler'
@@ -39,15 +37,14 @@ const NavBar = () => {
       </div>
       <dialog
         id='mobile-nav'
-        className={`links-container  ${isCollapse && "collapse"}`}
+        className={`links-container  ${isCollapse ? "open" : ""}`}
         aria-live='polite'
         aria-atomic={isCollapse}>
-        <ul>
+        <ul className='mobile-nav'>
           <button
             type='button'
             className='close-nav'
             onClick={() => setIsCollapse(false)}
-            style={{ alignSelf: "flex-end" }}
             aria-controls='mobile-nav'
             aria-expanded={isCollapse}
             aria-label='Close navigation'>
@@ -56,7 +53,10 @@ const NavBar = () => {
           {navArr.map((arr) => {
             return (
               <li key={arr}>
-                <a href={`#${arr}`} className='heading-xs'>
+                <a
+                  href={`#${arr}`}
+                  className='heading-xs nav-links'
+                  onClick={() => setIsCollapse(false)}>
                   {arr}
                 </a>
               </li>

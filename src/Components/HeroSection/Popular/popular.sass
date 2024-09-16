@@ -13,10 +13,12 @@
 
 .popular-img
     width: 100px
-    height: 129px
+    height: 100%
+    // height: 129px
     > img
         width: 100px
-        height: 129px
+        height: 100%
+        // height: 129px
 
 .popular-texts
     display: flex
@@ -28,6 +30,10 @@
         margin-bottom: 9px
         color: $space-blue
         font-weight: 800
+        transition: color 0.4s ease
+        &:hover
+            cursor: pointer
+            color: $vermillion
     > p
         color: $gunmetal
 
@@ -37,3 +43,4 @@
         grid-area: popular
         grid-template-columns: repeat(3, 1fr)
         grid-template-rows: 1fr
+        gap: 30px

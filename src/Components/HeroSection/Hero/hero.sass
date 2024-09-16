@@ -4,22 +4,32 @@
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: auto
+    grid-template-areas: "heroImg" "heroTxt" "news"
     row-gap: 1.5rem
-    margin-bottom: 4rem
-    grid-area: "heroCon"
 
 .hero-img
     min-width: 313px
     max-height: 300px
+    grid-area: heroImg
+    .hero-img-mobile
+        display: block
+    .hero-img-desktop
+        display: none
 
-.hero-text
+.hero-text-container
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: auto
+    grid-area: heroTxt
+    margin-bottom: 2.5rem
     > h1
         font-weight: 800
         margin-bottom: 1rem
         color: $space-blue
+.hero-text
+    display: flex
+    flex-direction: column
+
     > p
         color: $gunmetal
         margin-bottom: 1.5rem
@@ -37,7 +47,31 @@
     line-height: 1.5rem
     letter-spacing: 4.38px
     cursor: pointer
+    transition: all 0.7s ease
+    &:hover
+        background: $space-blue
+        color: $white
 
 @media (min-width: $tablet)
+    .hero-container
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: auto
+        grid-template-areas: "heroImg heroImg news" "heroTxt heroTxt news"
+        column-gap: 30px
+        row-gap: 1.75rem
+        margin-bottom: 71px
     .hero-img
         grid-auto-columns: 9fr
+        .hero-img-mobile
+            display: none
+        .hero-img-desktop
+            display: block
+    .hero-text-container
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        gap: 30px
+        margin-bottom: 0
+        > h1
+            margin-bottom: 0
+    .hero-text > p
+        margin-bottom: 29px
