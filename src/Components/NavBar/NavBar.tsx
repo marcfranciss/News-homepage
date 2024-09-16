@@ -40,7 +40,7 @@ const NavBar = () => {
         className={`links-container  ${isCollapse ? "open" : ""}`}
         aria-live='polite'
         aria-atomic={isCollapse}>
-        <ul className='mobile-nav'>
+        <div className='mobile-nav'>
           <button
             type='button'
             className='close-nav'
@@ -50,19 +50,21 @@ const NavBar = () => {
             aria-label='Close navigation'>
             <img src={closeBtn} alt='' />
           </button>
-          {navArr.map((arr) => {
-            return (
-              <li key={arr}>
-                <a
-                  href={`#${arr}`}
-                  className='heading-xs nav-links'
-                  onClick={() => setIsCollapse(false)}>
-                  {arr}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+          <ul>
+            {navArr.map((arr) => {
+              return (
+                <li key={arr}>
+                  <a
+                    href={`#${arr}`}
+                    className='heading-xs nav-links'
+                    onClick={() => setIsCollapse(false)}>
+                    {arr}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </dialog>
     </nav>
   );
