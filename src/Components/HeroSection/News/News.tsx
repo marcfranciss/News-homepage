@@ -18,7 +18,7 @@ const newsArr = [
 ];
 const News = () => {
   return (
-    <div className='news-container'>
+    <article className='news-container'>
       <h2 className='heading-m' id='new'>
         New
       </h2>
@@ -32,7 +32,7 @@ const News = () => {
           );
         })}
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -25,7 +25,7 @@ const popularArr = [
 ];
 const Popular = () => {
   return (
-    <div className='popular-container' id='popular'>
+    <article className='popular-container' id='popular'>
       {popularArr.map((arr) => {
         return (
           <div className='popular-card' key={arr.header}>
@@ -40,7 +40,7 @@ const Popular = () => {
           </div>
         );
       })}
-    </div>
+    </article>
   );
 };
 
